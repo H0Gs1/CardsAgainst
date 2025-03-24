@@ -1,0 +1,122 @@
+.col-md-3 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-right: 1px solid #ddd; 
+    background-color: #f8f9fa; 
+}
+
+
+    .modal-footer button {
+        margin-right: 10px; /* Adjust the value as needed */
+    }
+
+    .modal-footer .btn:last-child {
+        margin-right: 0; /* Removes the margin from the last button */
+    }
+
+
+.navigation .content {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 10px 0;
+}
+
+.nav-item a {
+    color: #333; 
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.no-bullets{
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+#popoverButton {
+    margin-left: 10px; /* Adjust this value to move the button to the right */
+    border-radius: 50%;
+}
+
+
+.table tr:hover {
+    background-color: #151F3A !important; 
+    color: #ddd; 
+    cursor: pointer;   
+         }         
+
+.tab button:hover {
+    background-color: #ddd;
+  }
+
+
+.profile-dropdown {
+    margin-top: auto; 
+    padding: 10px;
+}
+
+.profile-dropdown a {
+    color: #151F3A;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.profile-dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.col-md-9 {
+    padding: 20px;
+}
+
+.btn {
+    background-color: var(--bs-secondary);
+    color: rgb(255, 255, 255) !important; /* Set the text color of the close button */
+}
+
+header {
+    background-color: #151F3A;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #ddd;
+}
+
+table { width: 100%; 
+    border-collapse: collapse; 
+    background-color: #f2f2f2; 
+    font-family: Arial, sans-serif; 
+    font-size: 14px; 
+}
+
+th, td {
+         border: 1px solid black; 
+         padding: 10px; 
+         text-align: left;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    }
+
+    #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+    }

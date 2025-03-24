@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Title</title>
+<link href="assets/bootstrap-5.3.3/scss/bootstrap.css" rel="stylesheet" />
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  padding: 10px 20px;
+  border-bottom: 1px solid #111;
+}
+
+.container-mt-4 h2 {
+  text-align: center;
+}
+
+.header-text {
+  text-align: center;
+  font-size: 1.5rem;
+  flex-grow: 1;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;  
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+  }
+
+  .sidebar a {
+    font-size: 20px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+  <header class="header d-flex align-items-center justify-content-between">
+    <!-- Improved accessibility: Added aria-label for the sidebar button -->
+    <button class="btn btn-dark" onclick="openNav()" aria-label="Open Sidebar">☰</button>
+    <div class="header-text">
+      <span>Website Title</span>
+    </div>
+  </header>
+
+  <div id="main">
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <!-- Dropdown for Account with improved accessibility -->
+      <a class="dropdown-toggle" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false" aria-controls="submenu">
+        Account
+      </a>
+      <div class="collapse" id="submenu">
+        <a href="#">My profile</a>
+        <a href="#">My cards</a>
+        <a href="#">Game History</a>
+        <a href="LoginPage.html">Logout</a>
+      </div>
+      <a href="#">Community</a>
+      <a href="#">Rules</a>
+      <a href="#">About</a>
+    </div>
+
+    <!-- Content goes here -->
+    <div class="container mt-4">
+      <h2>Welcome to the Website!</h2>
+      <p>This is the main content area. Add home page for cards against</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS (Bundle with Popper) -->
+  <script src="assets\bootstrap-5.3.3\dist\js\bootstrap.bundle.min.js"></script>
+  <script>
+    // Open the sidebar
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    // Close the sidebar
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+
+    // Ensure the sidebar stays closed when the page first loads
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById("mySidebar").style.width = "0";  // Sidebar closed on load
+      document.getElementById("main").style.marginLeft = "0";  // No margin on the main content
+    });
+  </script>
+</body>
+</html>
